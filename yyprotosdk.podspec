@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   	s.requires_arc = true
   	s.source_files = 'include/**/*.h'
   	s.preserve_paths = 'libs/*.a'
-	s.library = 'yyprotosdk'
+	s.ios.library = 'yyprotosdk'
 	s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/yyprotosdk/libs"' }
 
 
