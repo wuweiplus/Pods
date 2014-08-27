@@ -10,14 +10,15 @@ Pod::Spec.new do |s|
       LICENSE
     }
 	s.author       = { 'yy' => 'yypm@yy.com' }
-	s.source       = { :http => "http://repo.yypm.com/dwbuild/mobile/ios/yyprotosdk/yyprotosdk-ios/20140826-13-r624709//yyprotosdk.zip" }
+	s.source       = { :http => "http://repo.yypm.com/dwbuild/mobile/ios/yyprotosdk/yyprotosdk-ios/20140826-13-r624709/yyprotosdk.zip" }
 	s.platform     = :ios, '4.3'
   	s.ios.deployment_target = '4.3'
   	s.requires_arc = true
   	s.source_files = 'include/**/*.h'
   	s.preserve_paths = 'libs/*.a'
 	s.libraries = 'yyprotosdk'
-	s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/yyprotosdk/libs"' }
+    s.frameworks = 'Foundation, SystemConfiguration'
+	s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/yyprotosdk/libs' }
 
 
 end
